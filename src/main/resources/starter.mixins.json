@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "starter.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": ["StarterMixin"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

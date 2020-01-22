@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "starter",
   "version": "${version}",
-
   "name": "Starter Mod",
   "description": "Describe your mod!",
   "authors": ["Your Name"],
@@ -10,24 +9,17 @@
     "homepage": "https://horuslugo.com",
     "sources": "https://github.com/HorusGoul/fabric-mod-starter"
   },
-
   "license": "MIT",
-
   "icon": "assets/starter/icon.png",
-
   "environment": "*",
-
   "entrypoints": {
     "main": ["starter.StarterMod"]
   },
-
   "mixins": ["starter.mixins.json"],
-
   "depends": {
     "fabricloader": ">=0.7.3",
     "minecraft": "1.15.x"
   },
-
   "suggests": {
     "flamingo": "*"
   }

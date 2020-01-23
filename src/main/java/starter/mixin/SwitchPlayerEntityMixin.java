@@ -13,6 +13,8 @@ public class SwitchPlayerEntityMixin {
 
   @Inject(at = @At("RETURN"), method = "damage")
   private void onDamage(DamageSource source, float amount, CallbackInfoReturnable info) {
-    System.out.println("The player received damage!");
+    PlayerEntity self = (PlayerEntity) (Object) this;
+
+    System.out.println("The player " + self.getGameProfile().getName() + " received damage");
   }
 }

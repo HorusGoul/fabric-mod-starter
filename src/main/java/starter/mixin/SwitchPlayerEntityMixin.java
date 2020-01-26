@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.util.math.BlockPos;
 
 @Mixin(PlayerEntity.class)
@@ -54,5 +55,17 @@ public class SwitchPlayerEntityMixin {
     // Finally change the Y to the real value and complete the teleport of both
     // players.
     self.teleport(otherPlayerPos.getX() + 0.5, otherPlayerPos.getY(), otherPlayerPos.getZ() + 0.5);
+
+    // Only swap inventories if the players are alive
+    if (self.getHealth() > 0.0f && otherPlayer.getHealth() > 0.0f) {
+
+      // Get the inventories of both players
+      ListTag selfInventory = self.inventory.serialize(new ListTag());
+      ListTag otherPlayerInventory = otherPlayer.inventory.serialize(new ListTag());
+
+      // Swap them
+      self.inventory.deserialize(otherPlayerInventory);
+      otherPlayer.inventory.deserialize(selfInventory);
+    }
   }
 }

@@ -12,9 +12,7 @@
   "license": "MIT",
   "icon": "assets/starter/icon.png",
   "environment": "*",
-  "entrypoints": {
-    "main": ["starter.StarterMod"]
-  },
+  "entrypoints": {},
   "mixins": ["starter.mixins.json"],
   "depends": {
     "fabricloader": ">=0.7.3",

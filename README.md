@@ -20,6 +20,6 @@ NOTE: Use `.\gradlew.bat runClient` in Windows
 
 ## Guides
 
-- Creating a Minecraft Mod using Java and Fabric
+- [Creating a Minecraft Mod using Java and Fabric](https://dev.to/horusgoul/creating-a-minecraft-mod-using-java-and-fabric-3bmo)
 
 TODO: Add more
